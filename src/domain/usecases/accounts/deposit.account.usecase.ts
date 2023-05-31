@@ -22,17 +22,17 @@ class DepositAccountUseCase implements IUseCase {
             throw new Error("Conta não encontrada para depósito.");
         }
 
-        const transaction: IDepositEntity = {
-            date: new Date(),
-            value: data.value,
-            status: TransactionStatus.Completed,
-            accountSourceId: account.indexId!,
-            accountSource: account,
-            type: TransactionType.Deposit,
-            envelope: 123
-        };
+        // const transaction: IDepositEntity = {
+        //     date: new Date(),
+        //     value: data.value,
+        //     status: TransactionStatus.Completed,
+        //     accountSourceId: account.indexId!,
+        //     accountSource: account,
+        //     type: TransactionType.Deposit,
+        //     envelope: 123
+        // };
 
-        transactionsRepository.create(transaction);
+        // transactionsRepository.create(transaction);
 
         account.balance += data.value;
         return accountsRepository.updateById(account);

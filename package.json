@@ -4,8 +4,9 @@
   "description": "Aula 09 da trilha de backend avançado da Gama, XP 44. Demonstração de como trabalhar com faker-js, autenticação e recuperação de senha.",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "jest",
-    "start": "tsc && node --unhandled-rejections=strict -r dotenv/config ./dist/infrastructure/apis/app/app.js",
+    "start": "node --unhandled-rejections=strict -r dotenv/config ./dist/infrastructure/apis/app/app.js",
     "debug": "export DEBUG=* && npm run start",
     "mocks": "tsc && node ./dist/infrastructure/persistence/mocks/mocks.js",
     "migrations": "tsc && npx sequelize db:migrate"
